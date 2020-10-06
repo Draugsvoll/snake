@@ -1,0 +1,32 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    background: black;
+}
+
+#game-board {
+    background-color: #ccc;
+    width: 100vmin;
+    height: 100vmin;   
+    /*vmin uses the ratio of the smallest side. */
+    display:grid;
+    /* use grid to make 21 rows and columns, same size */
+    /* dynamically sized, 21 squares */
+    grid-template-columns: repeat(21, 1fr);
+    grid-template-rows: repeat(21, 1fr)
+}
+
+.snake {
+    background: blue;
+    border: 0.25vmin solid black;
+}
+
+.food {
+    background: yellow;
+    border: 0.25vmin solid black;
+}
+
