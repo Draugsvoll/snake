@@ -3,12 +3,16 @@ import { randomGridPosition } from './grid.js'
 
 var food = randomFoodposition()
 const EXPANSION_RATE = 2
+export var scoreboard = document.querySelector(".scoreboard");
+export let score = 0
 
 
 export function update() {
   if(snakeOnFood(food)) {
           expandSnake(EXPANSION_RATE)
           food = randomFoodposition()
+          score += 10
+          scoreboard.textContent = "Score: " + score;
   }
 }
 

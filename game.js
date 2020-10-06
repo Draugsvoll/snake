@@ -1,17 +1,18 @@
 import { update as updateSnake, draw as drawSnake, SNAKE_SPEED } from './snake.js'
-import { update as updateFood, draw as drawFood} from './food.js'
+import { update as updateFood, draw as drawFood, scoreboard, score} from './food.js'
 import { getSnakeHead, snakeInterception} from './snake.js'
 import { outsideGrid } from './grid.js'
 
-
+scoreboard.textContent = "Score: " + score;
 let lastRenderTime = 0
-const gameBoard = document.getElementById('game-board')
+var gameBoard = document.getElementById('game-board')
 let gameOver = false
 
  // *game loop  timestamp
 function main(currentTime) {
     if(gameOver === true ) {
-       if (confirm('You lost. Press OK to restart')) {
+        scoreboard.textContent = "Score: " + score;
+       if (confirm(score+' Points! Press OK to restart')) {
            window.location = '/'   // refresh page
        }
        return

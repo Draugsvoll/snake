@@ -2,6 +2,7 @@ body {
     height: 100vh;
     width: 100vw;
     display:flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin:0;
@@ -10,8 +11,8 @@ body {
 
 #game-board {
     background-color: #ccc;
-    width: 100vmin;
-    height: 100vmin;   
+    width: 95vmin;
+    height: 95vmin;   
     /*vmin uses the ratio of the smallest side. */
     display:grid;
     /* use grid to make 21 rows and columns, same size */
@@ -30,3 +31,7 @@ body {
     border: 0.25vmin solid black;
 }
 
+.scoreboard {
+    color:white;
+    font-size: 22px;
+}
