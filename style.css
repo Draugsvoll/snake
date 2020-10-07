@@ -29,6 +29,7 @@ body {
 .food {
     background: yellow;
     border: 0.25vmin solid black;
+    border-radius: 100%;
 }
 
 .scoreboard {
